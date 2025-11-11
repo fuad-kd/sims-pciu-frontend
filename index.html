@@ -372,7 +372,7 @@
             setLoading(true);
             try {
                 // Check if the API_BASE_URL is still the placeholder
-                if (API_BASE_URL.includes('https://sims-api-backend.onrender.com')) {
+                if (API_BASE_URL.includes('https://sims-api-backend.onrender.com/api/students')) {
                     throw new Error('API URL is not configured. Please replace the placeholder.');
                 }
                 
