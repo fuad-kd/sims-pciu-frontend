@@ -407,7 +407,7 @@
                     id: user.id,
                     name: user.name,
                     // FIX 3: Dynamic Student ID like CSE0010001
-                    studentId: (user.id % 2 === 0 ? 'CSE' : 'EE' : 'CEN' : 'ENG') + (10000000 + user.id),
+                    studentId: (user.id % 2 === 0 ? 'CSE' : 'EE') + (10000000 + user.id),
                     // FIX 3: Random numeric CGPA (3.00-4.00)
                     grade: parseFloat((Math.random() * (4.00 - 3.00) + 3.00).toFixed(2)),
                     email: user.email,
