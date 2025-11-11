@@ -368,7 +368,14 @@
     
                     id: user.id,
                     name: user.name,
-                    studentId: "[A-Z]{2,3}\d+", // Create a mock Student ID
+                    studentId:
+                        <input type="text" 
+       id="studentID" 
+       name="studentID" 
+       required 
+       pattern="[A-Z]{2,3}\d+" 
+       title="ID must be 2-3 letters (e.g., CSE) followed by numbers."
+       placeholder="e.g., CSE03108145">,// Create a mock Student ID
                     grade: (user.id % 3 === 0) ? '10' : (user.id % 3 === 1 ? '11' : '12'), // Mock Grade
                     email: user.email,
                     status: (user.id % 2 === 0) ? 'Active' : 'Inactive' // Mock Status
