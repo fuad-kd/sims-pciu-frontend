@@ -365,9 +365,10 @@
                 // --- DATA MAPPING CORRECTION ---
                 // Map the generic mock data fields to the expected student fields
                 const mappedStudents = data.map(user => ({
+    
                     id: user.id,
                     name: user.name,
-                    studentId: 'PCIU' + (1000 + user.id), // Create a mock Student ID
+                    studentId: "[A-Z]{2,3}\d+", // Create a mock Student ID
                     grade: (user.id % 3 === 0) ? '10' : (user.id % 3 === 1 ? '11' : '12'), // Mock Grade
                     email: user.email,
                     status: (user.id % 2 === 0) ? 'Active' : 'Inactive' // Mock Status
