@@ -289,7 +289,7 @@
         // IMPORTANT: After deploying your Node.js server (e.g., on Render or Google Cloud Run), 
         // REPLACE the placeholder below with the public URL of that deployed service.
         // Example: const API_BASE_URL = 'https://sims-api-live.onrender.com/api/students';
-        const API_BASE_URL = 'https://PASTE_YOUR_LIVE_RENDER_URL_HERE/api/students'; 
+        const API_BASE_URL = 'https://sims-api-backend.onrender.com'; 
 
         const tableBody = document.getElementById('student-table-body');
         const emptyState = document.getElementById('empty-state');
@@ -376,7 +376,7 @@
                     throw new Error('API URL is not configured. Please replace the placeholder.');
                 }
                 
-                const response = await fetch(https://sims-api-backend.onrender.com);
+                const response = await fetch(API_BASE_URL);
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 
                 const data = await response.json();
